@@ -16,10 +16,11 @@ public class StudentService {
 	//private ArrayList<Student> studentList = new ArrayList<>();
 	private List<Student> studentList;
 
-	public void addStudent(Student s) {
+	public boolean addStudent(Student s) {
 
 		studentList.add(s);
 		FileUtil.saveToFile(studentList, FILE_NAME);
+		return true;
 	}
 
 	public void viewAll() {
